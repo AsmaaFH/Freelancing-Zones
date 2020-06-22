@@ -1,6 +1,6 @@
 body{
     
-    background-color: #eeeeee;
+    background-color: white;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -94,8 +94,8 @@ header .overlay {
     }
 }
 
-/*  .parallax {
-    background-image: url("image/freelancer.jpg");
+  .parallax {
+    background-image: url("assets/freelancer.jpg");
 
     min-height: 500px;
 
@@ -104,7 +104,7 @@ header .overlay {
     background-repeat: no-repeat;
 
     background-size: cover;
-} */
+} 
 
 .blog .carousel-indicators {
     left: 0px;

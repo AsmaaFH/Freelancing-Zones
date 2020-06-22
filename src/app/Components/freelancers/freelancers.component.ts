@@ -12,6 +12,15 @@ export class FreelancersComponent implements OnInit {
 
   subscription:Subscription[]=[];
   freelancersList:Freelancer[];
+
+
+  freelancersListStatic:Freelancer[]=[{id:1,flName:"Asmaa Hassan",flJobTitle:"Frontend Developer",flImg:"assets/1.jpg",
+qoute:"ITI freelancing instructors and mentors provided me with the tips and tricks to effectively create my freelancing profile and get my first job.."},
+{id:1,flName:"Asmaa Hassan",flJobTitle:"Frontend Developer",flImg:"assets/2.jpg",
+qoute:"ITI freelancing instructors and mentors provided me with the tips and tricks to effectively create my freelancing profile and get my first job.."},
+{id:1,flName:"Asmaa Hassan",flJobTitle:"Frontend Developer",flImg:"assets/WhatsApp Image 2020-06-13 at 3.08.42 AM.jpeg",
+qoute:"ITI freelancing instructors and mentors provided me with the tips and tricks to effectively create my freelancing profile and get my first job.."}] ;
+
   constructor(private freelancerService:FreelancerService) { }
 
   ngOnInit(): void {

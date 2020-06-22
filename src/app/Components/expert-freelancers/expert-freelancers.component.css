@@ -1,4 +1,4 @@
-img {
+ img {
     width: 40%;
     height: 30%;
     margin: 10px auto;
@@ -8,16 +8,16 @@ img {
 .head{
     text-align: center;
     font-size: 30px;
-    color: #235587 ;
+    color: #17214d ;
     width: auto;   
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     margin: 10px;
 }
 
 h2{
-    color: #FF6062 ;
+    color: #ff6f00 ;
 }
 
 i{
-    color: #FF6062;
-}
+    color: #ff6f00;
+} 

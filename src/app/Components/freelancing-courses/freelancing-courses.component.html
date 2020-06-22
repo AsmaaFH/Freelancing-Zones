@@ -1,7 +1,7 @@
 
 
 
-<div class="container">
+<div class="courses p-5">
         <!--Our CoursesTitle-->
         <div class="row" id="title1">
             <div class="col-sm-12">
@@ -12,7 +12,7 @@
             </div>
         </div>
         
-        <div class="row" id="title2">
+        <div class="row pb-5" id="title2">
             <div class="col-sm-12">
                 <p class="pt-3"
                     style="font-size: 20px ;text-align: center;font-family: Arial, Helvetica, sans-serif;color: dimgray;" 
@@ -24,8 +24,7 @@
         </div> 
         <!--EnnndCoursesTitle-->
 
-
-    <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+    <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation pb-5" [type]="'carousel-multi-item'"
                 [animation]="'slide'">
     <mdb-carousel-item *ngFor="let item of slides; let i = index">
         <div class="col-md-3" *ngFor="let card of item; let cardIndex = index">
@@ -38,6 +37,29 @@
         </div>
     </mdb-carousel-item>
     </mdb-carousel>
+
+            <!--Maharahtech-->
+            <div class="row " style="margin-top: 3rem;" id="maharatech" data-aos="fade-up" data-aos-duration="2000">
+                <div class="col-sm-12 col-md-12">
+                    <p style="text-align: center;font-size: 20px;color: dimgrey;font-family: Arial, Helvetica, sans-serif;" data-aos="fade-up">
+                        Rich repository of online technical courses in
+                        different technological disciplines could be found on:
+                        <a href="http://techleaders.eg/">NTL</a> and <a href="https://maharatech.gov.eg/">MaharaTech</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row" style="margin-left: 7rem;" id="maharaimage" data-aos="fade-up" data-aos-duration="3000">
+                <div class="col-md-4 col-ms-4" >
+                    <img src="assets/unnamed.png" width="70%" height="60%">
+                </div>
+                <div class="col-md-4 col-ms-4">
+                    <img src="assets/new logoVER09-14.png" width="70%" height="70%">
+                </div>
+                <div class="col-md-4 col-ms-4">
+                    <img src="assets/Coursera.PNG" width="70%" height="70%">
+                </div>
+            </div>
+           <!--EnndMaharahtech-->
 </div> 
 
 <br>
