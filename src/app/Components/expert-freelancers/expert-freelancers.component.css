@@ -1,0 +1,23 @@
+img {
+    width: 40%;
+    height: 30%;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+.head{
+    text-align: center;
+    font-size: 30px;
+    color: #235587 ;
+    width: auto;   
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin: 10px;
+}
+
+h2{
+    color: #FF6062 ;
+}
+
+i{
+    color: #FF6062;
+}

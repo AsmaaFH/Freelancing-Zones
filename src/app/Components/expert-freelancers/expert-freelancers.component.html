@@ -1,0 +1,30 @@
+<div class="container">
+
+    <h1 class="head pt-5">Meet our network of expert freelancers and remote workers</h1>
+
+    <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation pb-5" [type]="'carousel-multi-item'"
+                [animation]="'slide'">
+    <mdb-carousel-item *ngFor="let item of slides; let i = index">
+        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let card of item; let cardIndex = index">
+        <mdb-card class="my-1">
+            <img class="img-thumbnail rounded-circle" [src]="card.expertImg" alt="Card image cap">
+            <mdb-card-body class="m-0 pt-0">
+            <mdb-card-title >
+                <h2 class="name mb-0">{{card.expertName}}</h2>
+                <p>{{card.expertJobTitle}}</p>
+            </mdb-card-title>
+            <p><i class="fas fa-map-marker-alt m-1"></i>{{card.address}}</p>
+            <p>{{card.story}}</p>
+            <a href="#"> <i class="fab fa-linkedin-in"></i></a>
+            </mdb-card-body>
+        </mdb-card>
+        </div>
+    </mdb-carousel-item>
+    </mdb-carousel>
+</div>
+
+
+<!-- 
+<div *ngFor="let item of expertFreelancersList">
+    {{item.story}}
+</div> -->

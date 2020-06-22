@@ -1,0 +1,84 @@
+.container-fluid{
+    background-color: #235587 ;
+    
+
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 33px;
+    padding: 20px;
+}
+
+h3,p{
+    background-color: white;
+    color:#235587 ;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    border-radius: 5px;
+}
+
+
+@media (max-width:640px){
+    .firstImg{
+        display:none;
+    }
+}
+
+.covidannouncement{
+    position: relative;
+    font-family: 25px;
+    padding: 10% !important;
+    font-size: 20px;
+}
+
+p i{
+    position: absolute;
+    left: 10px;
+    padding-top: 3px;
+    color: #FF6062;
+    font-size: 20px;
+    
+    transform: rotateZ(-30deg);
+}
+
+#branchesZones{
+    color: #235587;
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 33px;
+    padding: 20px;
+
+}
+
+.branches{
+    margin-left: 15%;
+}
+
+.branch{
+    background-color: white;
+    color:#235587 ;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    border-radius: 5px;
+    padding:2%;
+    margin: 1px;
+}
+
+.branch i{
+    font-size: 20px;
+    color: #FF6062;
+}
+
+.branch p{
+    color:black ;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  
+}
+
+.mapImg{
+    width: 100%;
+    height: auto;
+    left: 0 !important;
+    
+}

@@ -1,0 +1,122 @@
+
+
+
+<div class="container">
+        <!--Our CoursesTitle-->
+        <div class="row" id="title1">
+            <div class="col-sm-12">
+                <p
+                    style="text-align: center;font-size: 50px;font-family: 'Odibee Sans', cursive;color: #101546;margin-top: 7rem;" 
+                    data-aos="zoom-in" data-aos-duration="2000">
+                    ONLINE freelancing courses</p>
+            </div>
+        </div>
+        
+        <div class="row" id="title2">
+            <div class="col-sm-12">
+                <p class="pt-3"
+                    style="font-size: 20px ;text-align: center;font-family: Arial, Helvetica, sans-serif;color: dimgray;" 
+                    data-aos="zoom-in" data-aos-duration="2000"> 
+                    Freelancing courses in Arabic with sign language support are available on <a
+                        href="https://maharatech.gov.eg/">MaharaTech </a>
+                    platform to help you pursue your freelancing career.</p>
+            </div>
+        </div> 
+        <!--EnnndCoursesTitle-->
+
+
+    <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+                [animation]="'slide'">
+    <mdb-carousel-item *ngFor="let item of slides; let i = index">
+        <div class="col-md-3" *ngFor="let card of item; let cardIndex = index">
+        <mdb-card class="my-1">
+            <mdb-card-img [src]="card.image" alt="Card image cap"></mdb-card-img>
+            <mdb-card-body>
+            <p style="color:black;">{{card.courseName}}</p>
+            </mdb-card-body>
+        </mdb-card>
+        </div>
+    </mdb-carousel-item>
+    </mdb-carousel>
+</div> 
+
+<br>
+
+
+
+                <!--Course Slider-->
+      <!--           <div class="row" id="course"  data-aos="fade-up" data-aos-duration="3000">
+                    <div class="col-md-12">
+                        <div id="news-slider10" class="owl-carousel">
+                            <div class="post-slide10">
+                                <img src="image/5bc597dbc70b1_thumb900.jpg" alt="">
+                                <div class="post-date">
+                                    <span class="month">Nov</span>
+                                    <span class="date">5</span>
+                                </div>
+                                <h3 class="post-title">
+                                    <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
+                                </h3>
+        
+                                <a href="#" class="read-more">Enroll here<i class="fa fa-chevron-right"></i></a>
+                            </div>
+        
+                            <div class="post-slide10">
+                                <img src="assets/5bc597dbc70b1_thumb900.jpg" alt="">
+                                <div class="post-date">
+                                    <span class="month">Nov</span>
+                                    <span class="date">8</span>
+                                </div>
+                                <h3 class="post-title">
+                                    <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
+                                </h3>
+        
+                                <a href="#" class="read-more">Enroll here<i class="fa fa-chevron-right"></i></a>
+                            </div>
+        
+                            <div class="post-slide10">
+                                <img src="assets/unnamed (1).png" alt="">
+                                <div class="post-date">
+                                    <span class="month">Nov</span>
+                                    <span class="date">8</span>
+                                </div>
+                                <h3 class="post-title">
+                                    <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
+                                </h3>
+        
+                                <a href="#" class="read-more">Enroll here<i class="fa fa-chevron-right"></i></a>
+                            </div>
+        
+                            <div class="post-slide10">
+                                <img src="assets/BLOG_freelancer-online-AR-670x419.png" alt="">
+                                <div class="post-date">
+                                    <span class="month">Nov</span>
+                                    <span class="date">8</span>
+                                </div>
+                                <h3 class="post-title">
+                                    <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
+                                </h3>
+        
+                                <a href="#" class="read-more">Enroll here<i class="fa fa-chevron-right"></i></a>
+                            </div>
+        
+                            <div class="post-slide10">
+                                <img src="assets/Freelancing-20190925113339332-1.jpg" alt="">
+                                <div class="post-date">
+                                    <span class="month">Nov</span>
+                                    <span class="date">8</span>
+                                </div>
+                                <h3 class="post-title">
+                                    <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
+                                </h3>
+        
+                                <a href="#" class="read-more">Enroll here<i class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!--EnndCourseSlider-->
+
+                <br>
+
+                

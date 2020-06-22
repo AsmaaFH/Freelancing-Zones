@@ -1,0 +1,36 @@
+.container-fluid{
+    background-color: #235587 ;
+}
+
+.head{
+    color: white;
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 33px;
+    padding: 30px;
+}
+h2,p,i{
+    text-align: center;
+}
+
+h2{
+    color: #FF6062;
+    font-size: 30px;
+}
+
+p{
+    color: white;
+    
+}
+
+i{
+    color:white;
+    font-size: 55px;
+    
+}
+
+img{
+    width: 100%;
+    height: auto;
+    padding: 2%;
+}
