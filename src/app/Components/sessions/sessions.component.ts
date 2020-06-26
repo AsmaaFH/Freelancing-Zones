@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SessionService } from 'src/app/Services/session.service';
 import { Subscription } from 'rxjs';
-import { Session } from 'protractor';
-import { SessionType } from 'src/app/ViewModels/session-type.enum';
+import { Session } from  'src/app/ViewModels/session';
+
 
 @Component({
   selector: 'app-sessions',
@@ -10,6 +10,31 @@ import { SessionType } from 'src/app/ViewModels/session-type.enum';
   styleUrls: ['./sessions.component.css']
 })
 export class SessionsComponent implements OnInit {
+  
+  customOptions: any = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: false
+  }
   monthIndex=new Date().getMonth();
   dayIndex=new Date().getUTCDay();
   time=new Date().toLocaleTimeString();
@@ -18,35 +43,36 @@ export class SessionsComponent implements OnInit {
   month=this.Months[this.monthIndex];
   day=this.days[this.dayIndex];
   subscriptions:Subscription[]=[];
-  sessionList:Session[];
   searchText="";
 
-  anyList=[{"type":"Webinar","subject":"The challenges of remote working","CoachName":"Mohamed Salah",
-            "image":"https://dummyimage.com/600x400/ff6063/235587&text=Session+Image",
-            "month":this.month,"day":this.day, "time":this.time},
-           {"type":"Webinar","subject":"Hoe crisis can create opportunity","CoachName":"Farghaly",
-            "image":"https://dummyimage.com/600x400/ff6063/235587&text=Session+Image",
-            "month":this.month,"day":this.day, "time":this.time},
-            {"type":"Webinar","subject":"Freelancing and remote working in the era of COVID-19","CoachName":"Lamiaa Ahmed",
-            "image":"https://dummyimage.com/600x400/ff6063/235587&text=Session+Image",
-            "month":this.month,"day":this.day ,"time":this.time}
-          ]
-
+  sessionList:Session[];/* =[
+    {id:1,title:"Challenges of work from home",date:new Date(), expertName:"Mohammed Salah", expertJobTitle:"Graphic Designer",
+  pannerImage:"assets/freelancer.png"},
+  {id:2,title:"Challenges of work from home",date:new Date(), expertName:"Mohammed Salah", expertJobTitle:"Graphic Designer",
+  pannerImage:"assets/freelancer.png"},
+  {id:3,title:"Challenges of work from home",date:new Date(), expertName:"Mohammed Salah", expertJobTitle:"Graphic Designer",
+  pannerImage:"assets/freelancer.png"},
+  {id:4,title:"Challenges of work from home",date:new Date(), expertName:"Mohammed Salah", expertJobTitle:"Graphic Designer",
+  pannerImage:"assets/freelancer.png"},
+  {id:5,title:"Challenges of work from home",date:new Date(), expertName:"Mohammed Salah", expertJobTitle:"Graphic Designer",
+  pannerImage:"assets/freelancer.png"}
+  ];
+ */
   constructor(private sessionService:SessionService) { }
 
   ngOnInit(): void {
 
-    var x = new Date('2013-05-23');
+  /*   var x = new Date('2013-05-23');
     var y = new Date('2013-05-23');
     console.log(this.day);
     console.log(this.time);
-    console.log(+x < +y);
-    /*this.subscriptions.push(this.sessionService.getAllSessions().subscribe(
+    console.log(+x < +y); */
+    this.subscriptions.push(this.sessionService.getAllSessions().subscribe(
       (response) => {
         this.sessionList = response;
       },
       (err) => {alert("error Occured while retrieving data !"); }
-    ));*/
+    ));
   }
 
 

@@ -10,14 +10,39 @@ import { ExpertFreelancer } from 'src/app/ViewModels/expert-freelancer';
   styleUrls: ['./expert-freelancers.component.css']
 })
 export class ExpertFreelancersComponent implements OnInit {
+
+  customOptions: any = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
+  }
   
   private subscriptions:Subscription[]=[];
-  expertFreelancersList:ExpertFreelancer[] =[
+  expertFreelancersList:ExpertFreelancer[];/*  =[
     {id:1, expertName:"Hany Saad",expertJobTitle:"ITI freelancing zones technical manager.",address:"Assuit",
     story:"with more than 12 years of experience in software development, monitoring,and team leading, Hany has furtherly expanded his work to the freelancing world and participating remotely in different projects",
   expertImg:"assets/hany.png"},
     {id:2,expertName:"Lamiaa Ahmed",expertJobTitle:"ITI freelancing zones technical manager.",address:"Assuit",
-    story:"with more than 12 years of experience in software development, monitoring,and team leading, Hany has furtherly expanded his work to the freelancing world and participating remotely in different projects",
+    story:"with mor, Hany has furtherly expanded his work to the freelancing world and participating remotely in different projects",
   expertImg:"assets/lamiaa.jpg"},
   {id:3,expertName:"Hany Saad",expertJobTitle:"ITI freelancing zones technical manager.",address:"Assuit",
     story:"with more than 12 years of experience in software development, monitoring,and team leading, Hany has furtherly expanded his work to the freelancing world and participating remotely in different projects",
@@ -33,7 +58,7 @@ expertImg:"assets/salah.jpg"},
   expertImg:"assets/ahmed2.jpg"}
   
   ];
- 
+  */
   constructor(private expertFreelancerService:ExpertFreelancerService) { }
 
   slides: any = [[]];

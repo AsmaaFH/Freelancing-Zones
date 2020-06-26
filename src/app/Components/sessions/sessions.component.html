@@ -1,105 +1,44 @@
 
 
        <!--Sessions-->
-       <div class="row " data-aos="fade-up" data-aos-duration="2000" id="session">
+    <div class="row " data-aos="fade-up" data-aos-duration="2000" id="session">
         <div class="col-sm-12 col-md-12 ">
-        <p style="margin-top: 7rem;text-align: center;color: #101546;font-size: 50px;font-family: 'Sriracha', cursive;
-                    border-top:5px solid #ff6f00 ;padding-top: 10px;">
+        <p style="margin-top: 7rem; padding: 40px; text-align: center;color: #101546;font-size: 50px;font-family: 'Sriracha', cursive;
+                    border-top:5px solid #ff6f00 ; padding-bottom: 8rem; line-height: normal;">
             OUR ONLINE SESSIONS
         </p>
     </div >
     </div>
-    <div class="row " style="margin-top: 5rem;" data-aos="fade-up" data-aos-duration="2000">
-        <div class="col-md-12">
-            <div id="news-slider14" class="owl-carousel">
-                <div class="post-slide14">
-                    <h3 class="post-category"><a href="#">html</a></h3>
-                    <div class="post-review">
-                        <div class="post-bar">
-                            <span class="month">nov</span>
-                            <span class="date">5</span>
-                        </div>
-                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
-                    </div>
-                    <div class="post-img">
-                        <img src="http://bestjquery.com/tutorial/news-slider/demo13/images/img-1.jpg" alt="">
-                    </div>
-                    <p class="post-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.
-                    </p>
-                </div>
 
-                <div class="post-slide14">
-                    <h3 class="post-category"><a href="#">css</a></h3>
-                    <div class="post-review">
-                        <div class="post-bar">
-                            <span class="month">nov</span>
-                            <span class="date">7</span>
-                        </div>
-                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+    <owl-carousel-o [options]="customOptions">
+ 
+        <ng-container *ngFor="let item of sessionList">
+          <ng-template carouselSlide [id]="item.id">
+            <div class="post-slide14">
+                <h3 class="post-category"><a href="#">{{item.title}}</a></h3>
+                <div class="post-review">
+                    <div class="post-bar">
+                        <span class="month">{{item.date.getMonth()}}</span>
+                        <span class="date">{{item.date.getUTCDay()}}</span>
                     </div>
-                    <div class="post-img">
-                        <img src="http://bestjquery.com/tutorial/news-slider/demo13/images/img-2.jpg" alt="">
-                    </div>
-                    <p class="post-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.
-                    </p>
+                    <h3 class="post-title"><a href="#">{{item.expertName}}</a></h3>
+                    <p>{{item.expertJobTitle}}</p>
                 </div>
-
-                <div class="post-slide14">
-                    <h3 class="post-category"><a href="#">php</a></h3>
-                    <div class="post-review">
-                        <div class="post-bar">
-                            <span class="month">nov</span>
-                            <span class="date">10</span>
-                        </div>
-                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
-                    </div>
-                    <div class="post-img">
-                        <img src="http://bestjquery.com/tutorial/news-slider/demo13/images/img-3.jpg" alt="">
-                    </div>
-                    <p class="post-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.
-                    </p>
+                <div class="post-img">
+                    <img src="http://bestjquery.com/tutorial/news-slider/demo13/images/img-1.jpg" alt="">
                 </div>
-
-                <div class="post-slide14">
-                    <h3 class="post-category"><a href="#">php</a></h3>
-                    <div class="post-review">
-                        <div class="post-bar">
-                            <span class="month">nov</span>
-                            <span class="date">10</span>
-                        </div>
-                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
-                    </div>
-                    <div class="post-img">
-                        <img src="http://bestjquery.com/tutorial/news-slider/demo13/images/img-4.jpg" alt="">
-                    </div>
-                    <p class="post-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.
-                    </p>
-                </div>
-
-                <div class="post-slide14">
-                    <h3 class="post-category"><a href="#">php</a></h3>
-                    <div class="post-review">
-                        <div class="post-bar">
-                            <span class="month">nov</span>
-                            <span class="date">10</span>
-                        </div>
-                        <h3 class="post-title"><a href="#">Latest News Post</a></h3>
-                    </div>
-                    <div class="post-img">
-                        <img src="http://bestjquery.com/tutorial/news-slider/demo13/images/img-5.jpg" alt="">
-                    </div>
-                    <p class="post-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.
-                    </p>
-                </div>
+              <!--   <p class="post-description">
+                    {{item.expertJobTitle}}
+                </p> -->
             </div>
-        </div>
-    </div>
+          </ng-template>
+          
+        </ng-container>
+     
+      </owl-carousel-o>
     <!--EndSession-->
+
+
 
 <br>
 

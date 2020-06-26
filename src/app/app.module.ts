@@ -17,10 +17,13 @@ import { from } from 'rxjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
-import { CarouselModule, WavesModule, ButtonsModule,CardsModule } from 'angular-bootstrap-md';
+//import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
+//import { CarouselModule, WavesModule, ButtonsModule,CardsModule } from 'angular-bootstrap-md';
 import {SessionsComponent} from './Components/sessions/sessions.component';
 import { FilterPipe } from './Pipes/filter.pipe'
 import { FormsModule } from '@angular/forms';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { HeaderComponent } from './Components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     FreelancingCoursesComponent,
     SessionsComponent,
     FilterPipe,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,9 +49,9 @@ import { FormsModule } from '@angular/forms';
     MatSliderModule,
     MatCarouselModule.forRoot(),
     CarouselModule,
-    WavesModule, 
-    ButtonsModule,
-    CardsModule,
+    //WavesModule, 
+    //ButtonsModule,
+    //CardsModule,
     FormsModule
 ],
   

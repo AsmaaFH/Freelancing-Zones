@@ -1,8 +1,22 @@
- img {
-    width: 40%;
-    height: 30%;
-    margin: 10px auto;
-    border-radius: 8px;
+#cstmBrdr{
+    border-width: 1px 1px 5px !important;
+    border-style: solid !important;
+    border-color: #e67e22 #f0f0f0 #f0f0f0 !important;
+    border-radius: 5px;
+    min-height: 500px;
+  
+}
+
+
+
+img{
+    width: 50% !important;
+    height: auto !important;
+    border-radius: 50% !important;
+    position: relative;
+    margin: auto;
+    margin-bottom: 8% !important;
+    top: 25px;
 }
 
 .head{

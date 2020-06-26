@@ -6,7 +6,7 @@
         <div class="row" id="title1">
             <div class="col-sm-12">
                 <p
-                    style="text-align: center;font-size: 50px;font-family: 'Odibee Sans', cursive;color: #101546;margin-top: 7rem;" 
+                    style="text-align: center;font-size: 50px;font-family: 'Odibee Sans', cursive;color: #101546;margin-top: 7rem; line-height: normal;" 
                     data-aos="zoom-in" data-aos-duration="2000">
                     ONLINE freelancing courses</p>
             </div>
@@ -24,7 +24,7 @@
         </div> 
         <!--EnnndCoursesTitle-->
 
-    <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation pb-5" [type]="'carousel-multi-item'"
+    <!-- <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation pb-5" [type]="'carousel-multi-item'"
                 [animation]="'slide'">
     <mdb-carousel-item *ngFor="let item of slides; let i = index">
         <div class="col-md-3" *ngFor="let card of item; let cardIndex = index">
@@ -36,109 +36,61 @@
         </mdb-card>
         </div>
     </mdb-carousel-item>
-    </mdb-carousel>
+    </mdb-carousel> -->
 
-            <!--Maharahtech-->
-            <div class="row " style="margin-top: 3rem;" id="maharatech" data-aos="fade-up" data-aos-duration="2000">
-                <div class="col-sm-12 col-md-12">
-                    <p style="text-align: center;font-size: 20px;color: dimgrey;font-family: Arial, Helvetica, sans-serif;" data-aos="fade-up">
-                        Rich repository of online technical courses in
-                        different technological disciplines could be found on:
-                        <a href="http://techleaders.eg/">NTL</a> and <a href="https://maharatech.gov.eg/">MaharaTech</a>
-                    </p>
-                </div>
-            </div>
-            <div class="row" style="margin-left: 7rem;" id="maharaimage" data-aos="fade-up" data-aos-duration="3000">
-                <div class="col-md-4 col-ms-4" >
-                    <img src="assets/unnamed.png" width="70%" height="60%">
-                </div>
-                <div class="col-md-4 col-ms-4">
-                    <img src="assets/new logoVER09-14.png" width="70%" height="70%">
-                </div>
-                <div class="col-md-4 col-ms-4">
-                    <img src="assets/Coursera.PNG" width="70%" height="70%">
-                </div>
-            </div>
-           <!--EnndMaharahtech-->
+    <br>
+    <!-- owl test -->
+    <owl-carousel-o [options]="customOptions">
+ 
+    <ng-container *ngFor="let slide of coursesList">
+      <ng-template carouselSlide [id]="slide.id">
+        <img class="img img-thumbnail" [src]="slide.image">
+        <p class="p-4 border" style="color:black; left: 10%;">{{slide.courseName}}</p>
+      </ng-template>
+      
+    </ng-container>
+ 
+  </owl-carousel-o>
+
+            
+           
 </div> 
 
 <br>
+<!--Maharahtech-->
+<div class="container">
+	<div class="row">
+		<div class="row">
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="assets/unnamed.png"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="assets/new logoVER09-14.png"
+                         alt="Another alt text">
+                </a>
+            </div>
 
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="assets/Coursera.PNG"
+                         alt="Another alt text">
+                </a>
+            </div>
+        </div>
+	</div>
+</div>
+<!--EnndMaharahtech-->
 
-
-                <!--Course Slider-->
-      <!--           <div class="row" id="course"  data-aos="fade-up" data-aos-duration="3000">
-                    <div class="col-md-12">
-                        <div id="news-slider10" class="owl-carousel">
-                            <div class="post-slide10">
-                                <img src="image/5bc597dbc70b1_thumb900.jpg" alt="">
-                                <div class="post-date">
-                                    <span class="month">Nov</span>
-                                    <span class="date">5</span>
-                                </div>
-                                <h3 class="post-title">
-                                    <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
-                                </h3>
-        
-                                <a href="#" class="read-more">Enroll here<i class="fa fa-chevron-right"></i></a>
-                            </div>
-        
-                            <div class="post-slide10">
-                                <img src="assets/5bc597dbc70b1_thumb900.jpg" alt="">
-                                <div class="post-date">
-                                    <span class="month">Nov</span>
-                                    <span class="date">8</span>
-                                </div>
-                                <h3 class="post-title">
-                                    <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
-                                </h3>
-        
-                                <a href="#" class="read-more">Enroll here<i class="fa fa-chevron-right"></i></a>
-                            </div>
-        
-                            <div class="post-slide10">
-                                <img src="assets/unnamed (1).png" alt="">
-                                <div class="post-date">
-                                    <span class="month">Nov</span>
-                                    <span class="date">8</span>
-                                </div>
-                                <h3 class="post-title">
-                                    <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
-                                </h3>
-        
-                                <a href="#" class="read-more">Enroll here<i class="fa fa-chevron-right"></i></a>
-                            </div>
-        
-                            <div class="post-slide10">
-                                <img src="assets/BLOG_freelancer-online-AR-670x419.png" alt="">
-                                <div class="post-date">
-                                    <span class="month">Nov</span>
-                                    <span class="date">8</span>
-                                </div>
-                                <h3 class="post-title">
-                                    <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
-                                </h3>
-        
-                                <a href="#" class="read-more">Enroll here<i class="fa fa-chevron-right"></i></a>
-                            </div>
-        
-                            <div class="post-slide10">
-                                <img src="assets/Freelancing-20190925113339332-1.jpg" alt="">
-                                <div class="post-date">
-                                    <span class="month">Nov</span>
-                                    <span class="date">8</span>
-                                </div>
-                                <h3 class="post-title">
-                                    <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
-                                </h3>
-        
-                                <a href="#" class="read-more">Enroll here<i class="fa fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <!--EnndCourseSlider-->
-
-                <br>
-
-                

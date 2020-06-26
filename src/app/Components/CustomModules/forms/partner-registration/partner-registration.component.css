@@ -1,0 +1,26 @@
+.container {
+    background-image: url('assets/1691909.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+}
+
+.form-login {
+
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color: #d2d2d2;
+    border-width: 5px;
+
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.wrapper {
+    text-align: center;
+}

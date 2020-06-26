@@ -1,137 +1,72 @@
 <div style="background-color: white;" class="p-0 m-0">
- <!--Freelancers-->
- <div class="row mt-2" data-aos="fade-up"   data-aos-duration="2000">
-  <div class="col-sm-12 col-md-12">
-      <p class="pb-3"
-          style="text-align: center;font-size: 40px;font-family: 'Sriracha', cursive;color: #101546;margin-top: 7rem;">
+    <!--Freelancers-->
+    <div class="col-sm-12 col-md-12">
+      <p
+          style="text-align: center;font-family: 'Sriracha', cursive; font-size: 40px;color: #101546;margin-top: 7rem; line-height: normal;">
           What Our FREELANCERS and REMOTE WORKERS say</p>
           <hr style="border-width: 5px;width: 400px;background-color: #ff6f00;opacity: 0.5;">
+    </div>
+
+    <mat-carousel
+    timings="500ms ease-in"
+    [autoplay]="true"
+    interval="5000"
+    color="white"
+    maxWidth="auto"
+    proportion="25"
+    slides="5"
+    [loop]="true"
+    [hideArrows]="false"
+    [hideIndicators]="true"
+    [useKeyboard]="true"
+    [useMouseWheel]="false"
+    orientation="ltr"
+    >
+
+      <mat-carousel-slide
+      #matCarouselSlide
+      *ngFor="let item of freelancersList ; let i = index"
+      [hideOverlay]="true"
+      >
+        <div class="row pt-5 pb-0 mb-0 text-center ml-4" style="top:50%; background-color: white ; background-image: url('assets/orange-quotation-marks-md.png'),url('assets/26701-1-quotation-transparent-background.png');
+        background-repeat: no-repeat;background-size:8% 35%
+        ;margin-bottom: 50px;background-position: left top,right bottom;width: 96%;">
+                  <div class="col-md-1">
+                  </div>
+                  <div class="col-sm-6  col-md-2  ">
+                      <img class="img-thumbnail" [src]="item.flImg" width="150px" height="150px" style="border-radius: 50%;">
+                  </div>
+                  <div class="col-sm-6 col-md-8 mt-3">
+                      <p class="p-2" style="font-family: 'courier', cursive;;
+                              font-size: 25px;color: #1a237e;">{{item.qoute}}</p>
+                      <p class="p-2" style="color: #ff6f00;">{{item.flName}} </p>
+                      <p class="p-2">{{item.flJobTitle}}</p>
+                  </div>
+                  <div class="col-md-1">
+
+                  </div>
+          </div>
+      </mat-carousel-slide>
+    </mat-carousel>  
+    <!--EndFreelancer-->
+
+</div>
+
+<div class="mb-5 carouselInsmallScreen">
+  <owl-carousel-o [options]="customOptions" class="mb-5">
+      <ng-container *ngFor="let item of freelancersList" >
+          <ng-template carouselSlide [id]="item.id" >
+            <div class="border p-2 m-2" id="cstmBrdr">
+              <img [src]="item.flImg">
+              <h3 style="color: #ff6f00;">{{item.flName}}</h3>
+              <p class="p-0">{{item.flJobTitle}}</p>
+              <p style="color: #101546;"><span style="color:#ff6f00 ;font-size: 25px;">"</span>{{item.qoute}}<span  style="color:#ff6f00 ; font-size: 25px;">"</span></p>       
+            </div>
+          </ng-template>
+      </ng-container>
+    </owl-carousel-o>
   </div>
-</div>
-<div id="carouselContent" class="carousel slide mt-5" data-ride="carousel" data-aos="fade-up" data-aos-duration="2000">
-  <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active " *ngFor="let item of freelancersListStatic">
-          <div class="row text-center ml-4 " style="background-image: url('assets/orange-quotation-marks-md.png'),url('assets/26701-1-quotation-transparent-background.png');
-  background-repeat: no-repeat;background-size:8% 35%
-     ;margin-bottom: 50px;background-position: left top,right bottom;width: 96%;">
-              <div class="col-md-1">
-              </div>
-              <div class="col-sm-6  col-md-2  ">
-                  <img [src]="item.flImg" width="150px" height="150px" style="border-radius: 50%;">
-              </div>
-              <div class="col-sm-6 col-md-8 mt-3">
-                  <p class="p-2" style="font-family: 'MuseoModerno', cursive;;
-      font-size: 25px;color: #1a237e;">{{item.qoute}}</p>
-                  <p class="p-2" style="font-family: 'Lobster', cursive;color: #ff6f00;">{{item.flName}} </p>
-                  <p class="p-2" style="font-family: 'Oswald', sans-serif;">{{item.flJobTitle}}</p>
-              </div>
-              <div class="col-md-1">
 
-              </div>
-          </div>
-      </div>
-
-<!--       <div class="carousel-item ">
-          <div class="row  text-center ml-4" style="background-image: url('image/orange-quotation-marks-md.png'),url('image/26701-1-quotation-transparent-background.png');
-      background-repeat: no-repeat;background-size:8% 35%
-         ;margin-bottom: 50px;background-position: left top,right bottom;width: 96%;">
-              <div class="  col-md-1 text-center ">
-              </div>
-              <div class="col-sm-6  col-md-2  ">
-                  <img src="image/1.jpg" width="150px" height="150px" style="border-radius: 50%;">
-              </div>
-              <div class="col-sm-6 col-md-8 mt-3">
-                  <p style="font-family: 'MuseoModerno', cursive;
-          font-size: 20px;color: #1a237e;;">ITI freelancing instructors and mentors provided me with
-                      the tips and tricks to effectively create my
-                      freelancing profile and get my first job..</p>
-                  <p style="font-family: 'Lobster', cursive;color: #ff6f00;">Samar Mahmoud </p>
-                  <p style="font-family: 'Oswald', sans-serif;">QA Tester </p>
-              </div>
-              <div class="  col-md-1 ">
-              </div>
-          </div>
-      </div>
-
-
-      <div class="carousel-item  ">
-          <div class="row text-center ml-4 " style="background-image: url('image/orange-quotation-marks-md.png'),url('image/26701-1-quotation-transparent-background.png');
-      background-repeat: no-repeat;background-size:8% 35%
-         ;margin-bottom: 50px;background-position: left top,right bottom;width: 96%;">
-              <div class="  col-md-1  ">
-              </div>
-              <div class="col-sm-6  col-md-2  ">
-                  <img src="image/3.jpg" width="150px" height="150px" style="border-radius: 50%;">
-              </div>
-              <div class="col-sm-6 col-md-8 mt-3">
-                  <p style="font-family: 'MuseoModerno', cursive;
-          font-size: 20px;color: #1a237e;;">Working as a freelancer gave me control over my time, resources
-                      and income.</p>
-                  <p style="font-family: 'Lobster', cursive;color: #ff6f00;">Ahmed Haroon </p>
-                  <p style="font-family: 'Oswald', sans-serif;">Graphic designer </p>
-              </div>
-              <div class="  col-md-1 ">
-              </div>
-          </div>
-      </div>
-
-      <div class="carousel-item  ">
-          <div class="row text-center ml-4 " style="background-image: url('image/orange-quotation-marks-md.png'),url('image/26701-1-quotation-transparent-background.png');
-      background-repeat: no-repeat;background-size:8% 35%
-         ;margin-bottom: 50px;background-position: left top,right bottom;width: 96%;">
-              <div class="  col-md-1 text-center ">
-              </div>
-              <div class="col-sm-6  col-md-2  ">
-                  <img src="image/WhatsApp Image 2020-06-13 at 3.08.42 AM (1).jpeg" width="150px" height="150px"
-                      style="border-radius: 50%;">
-              </div>
-              <div class="col-sm-6 col-md-8 mt-3">
-                  <p style="font-family: 'MuseoModerno', cursive;
-          font-size: 20px;color: #1a237e;;">Being exposed to different cultures through remote working
-                      helped me develop not only my
-                      technical skills but my personal skills and language.</p>
-                  <p style="font-family: 'Lobster', cursive;color: #ff6f00;">Doaa Elsherif </p>
-                  <p style="font-family: 'Oswald', sans-serif;">Social media specialist </p>
-              </div>
-              <div class="  col-md-1 ">
-              </div>
-          </div>
-      </div>
-
-      <div class="carousel-item  ">
-          <div class="row text-center ml-4 " style="background-image: url('image/orange-quotation-marks-md.png'),url('image/26701-1-quotation-transparent-background.png');
-      background-repeat: no-repeat;background-size:8% 35%
-         ;margin-bottom: 50px;background-position: left top,right bottom;width: 96%;">
-              <div class="  col-md-1 text-center ">
-              </div>
-              <div class="col-sm-6  col-md-2  ">
-                  <img src="image/WhatsApp Image 2020-06-13 at 3.08.42 AM.jpeg" width="150px" height="150px"
-                      style="border-radius: 50%;">
-              </div>
-              <div class="col-sm-6 col-md-8 mt-3">
-                  <p style="font-family: 'MuseoModerno', cursive;
-          font-size: 20px;color: #1a237e;;">Now you can become your own business manager, while if you get
-                      stuck with any problem,
-                      there is always someone to help you</p>
-                  <p style="font-family: 'Lobster', cursive;color: #ff6f00;">Ethar atef </p>
-                  <p style="font-family: 'Oswald', sans-serif;">graphic designer </p>
-              </div>
-              <div class="  col-md-1 ">
-              </div>
-          </div>
-      </div> -->
-  </div>
-  <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-  </a>
-</div>
-<!--EndFreelancer-->
-</div>
 
 <!-- <div class="container">
 <mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">

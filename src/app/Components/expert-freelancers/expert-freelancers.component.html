@@ -1,11 +1,40 @@
-<div class="container">
 
-    <h1 class="head pt-5" style="text-align: center;font-size: 50px;font-family: 'Odibee Sans' ">Meet our expert freelancers</h1>
 
-    <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation pb-5" [type]="'carousel-multi-item'"
+    <div class="row" id="experttit"data-aos="fade-up" data-aos-duration="2000" >
+        <div class="col-sm-12 col-md-12">
+        <p style="margin-top: 7rem; padding: 40px; text-align: center;color: #101546;font-size: 50px;font-family: 'Sriracha', cursive;
+        border-top:5px solid #ff6f00 ; padding-bottom: 8rem; line-height: normal;">
+            MEET OUR EXPERTS
+        </p>
+        </div>
+    </div>
+
+    <!-- owl carousel -->
+ 
+    <div class="mb-5">
+    <owl-carousel-o [options]="customOptions" class="mb-5">
+        
+        <ng-container *ngFor="let item of expertFreelancersList">
+          <ng-template carouselSlide [id]="item.id" >
+            <div class="border p-2 m-2" id="cstmBrdr">
+                <img class="img-thumbnail rounded-circle" [src]="item.expertImg" alt="Card image cap">
+                    <h2 class="name mb-0">{{item.expertName}}</h2>
+                    <p>{{item.expertJobTitle}}</p>
+                <p><i class="fas fa-map-marker-alt m-1"></i>{{item.address}}</p>
+                <p>{{item.story}}</p>
+                <a href="#"> <i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </ng-template>
+          
+        </ng-container>
+     
+      </owl-carousel-o>
+    </div>
+
+<!--     <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation pb-5" [type]="'carousel-multi-item'"
                 [animation]="'slide'">
     <mdb-carousel-item *ngFor="let item of slides; let i = index">
-        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let card of item; let cardIndex = index">
+        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let card of expertFreelancersList; let cardIndex = index">
         <mdb-card class="my-1">
             <img class="img-thumbnail rounded-circle" [src]="card.expertImg" alt="Card image cap">
             <mdb-card-body class="m-0 pt-0">
@@ -20,21 +49,21 @@
         </mdb-card>
         </div>
     </mdb-carousel-item>
-    </mdb-carousel>
+    </mdb-carousel> -->
     <!--Button-->
     <div class="row" id="buttonexpert" >
         <div class="col-sm-12 col-md-12" style="margin-bottom: 20px;">
             <div  class="d-flex justify-content-center">
-    <form class="form-inline mt-2 mt-md-0" action="Experts.html">
-        <button class="btn my-2 my-sm-0 rounded-pill " id="Join" type="submit"  >
-            Join our network expert <i class="fas fa-sign-in-alt"
+                <form class="form-inline mt-2 mt-md-0" action="Experts.html">
+                <button routerLink="/form/expert" class="btn my-2 my-sm-0 rounded-pill " id="Join" type="submit"  >
+                 Join our network expert <i class="fas fa-sign-in-alt"
                 style="height: 30px;font-size: 20px;margin-left: 2px;"></i></button>
-    </form>
-</div>
-  </div>
+                </form>
+            </div>
+        </div>
     </div>
 <!--EndButton-->
-</div>
+
 
 
 <!-- 
